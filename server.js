@@ -10,8 +10,7 @@ app.use(express.json());
 
 // Connect to MongoDB database
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/retour-utilisateur';
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
+mongoose.connect(mongoURI, { 
   useUnifiedTopology: true
 }).then(() => {
   console.log('Connected to the database');
