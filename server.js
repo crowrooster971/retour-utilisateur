@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB database
+// Default is set to 'mongodb://localhost:27017/retour-utilisateur'
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/retour-utilisateur';
 mongoose.connect(mongoURI, { 
   useUnifiedTopology: true,
