@@ -14,9 +14,9 @@ mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
-  console.log('Connecté à la base de données')
+  console.log('Connecté à la base de données');
 }).catch(err => {
-  console.error('Erreur de connexion à MongoDB', err);
+  console.error('Erreur de connexion à MongoDB:', err.message);
 });
 
 // Routes
