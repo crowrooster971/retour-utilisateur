@@ -11,11 +11,13 @@ app.use(express.json());
 // Connect to MongoDB database
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/retour-utilisateur';
 mongoose.connect(mongoURI, { 
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useNewUrlParser: true
 }).then(() => {
   console.log('Connected to the database');
 }).catch(err => {
   console.error('Connection error to MongoDB:', err);
+  console.error('Make sure your MongoDB server is running and the URI is correct.');
   process.exit(1);
 });
 
