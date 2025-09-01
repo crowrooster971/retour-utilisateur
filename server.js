@@ -12,7 +12,9 @@ app.use(express.json());
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/retour-utilisateur';
 mongoose.connect(mongoURI, { 
   useUnifiedTopology: true,
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false
 }).then(() => {
   console.log('Connected to the database');
 }).catch(err => {
