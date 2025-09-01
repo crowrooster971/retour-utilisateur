@@ -17,6 +17,6 @@
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.4"
   },
-  "author": "Updated Author Name",
+  "author": "New Author Name",
   "license": "MIT"
 }
