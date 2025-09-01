@@ -16,7 +16,8 @@ mongoose.connect(mongoURI, {
 }).then(() => {
   console.log('Connecté à la base de données');
 }).catch(err => {
-  console.error('Erreur de connexion à MongoDB:', err.message);
+  console.error('Erreur de connexion à MongoDB:', err);
+  process.exit(1);
 });
 
 // Routes
