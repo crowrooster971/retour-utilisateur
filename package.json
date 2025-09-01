@@ -1,0 +1,22 @@
+{
+  "name": "retour-utilisateur",
+  "version": "1.0.0",
+  "description": "Application web pour la collecte de retours d'utilisateurs.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently "npm:start" "npm:client""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  },
+  "author": "Votre Nom",
+  "license": "MIT"
+}
