@@ -9,7 +9,8 @@ app.use(cors());
 app.use(express.json());
 
 // Connexion à la base de données MongoDB
-mongoose.connect('mongodb://localhost:27017/retour-utilisateur', {
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/retour-utilisateur';
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
